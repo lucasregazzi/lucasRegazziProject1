@@ -16,13 +16,19 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
 }
 
 figure,
-h1 {
+h1,
+input {
     margin: 0;
 }
 
 body {
+    text-align: center;
     color: #1F2002;
     font-family: 'Catamaran', sans-serif;
+}
+
+p {
+    line-height: 29px;
 }
 
 ul {
@@ -31,13 +37,17 @@ ul {
 
 h1 {
     font-size: 4rem;
+    text-align: left;
 }
 
 h1,
 h2,
 h3,
-a.feature {
+button.feature,
+.quickLinks,
+footer nav {
     font-family: 'Nova Flat', cursive;
+    font-weight: normal;
 }
 
 a {
@@ -52,9 +62,23 @@ img {
 
 h1, 
 h2, 
-a.feature, 
-header nav {
+button.feature, 
+header nav,
+.quickLinks {
     color: #186684;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+button.feature {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #E85B26;
+    text-transform: uppercase;
+    background-color: transparent;
 }
 
 h3 {
@@ -64,6 +88,7 @@ h3 {
 /* HEADER Styles */
 
 header {
+    height: 100vh;
     background-image: url('./assets/image-1@2x.png');
     background-size: cover;
     background-attachment: scroll;
@@ -85,7 +110,7 @@ i.fas {
     transition-duration: 0.3s;
 }
 
-nav {
+header nav {
     visibility: hidden;
 }
 
@@ -95,42 +120,171 @@ nav input {
     cursor: pointer;
 }
 
-ul.menu {
-    position: fixed;
+ul {
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.menu {
+    position: absolute;
     z-index: 1;
     width: 100vw;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: translate(100%, 0);
+    transform: translate(-100%, 0);
     transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
-    font-size: 20px;
-    line-height: 29px;
 }
 
-ul.menu li {
+.menu li {
     text-align: center;
-    margin: 23px 20px;
+    margin: 23px;
     border-bottom: 1px solid transparent;
     transition-duration: 0.2s;
     float: left;
 }
 
-ul.menu li:hover {
+.menu li:hover {
     border-bottom: 1px solid #E85B26;
     color: #E85B26;
 }
 
-/* ABOUT Styles */
+/* WRAPPER Styles */
 
 .wrapper {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 50px 0 40px 0;
 }
 
+.wrapper img {
+    display: block;
+    width: 100%;
+}
+
+/* BLOG Styles */
+
+.blog {
+    background-color: #f4f4f4;
+}
+
+.blog h2 {
+    margin-top: 50px;
+}
+
+.blog p {
+    text-align: left;
+}
+
+/* QUICK LINKS Styles */
+
+.quickLinks {
+    background-image: url('./assets/image-5@2x.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center left;
+    font-size: 1.4rem;
+}
+
+.quickLinks .wrapper {
+    width: 45%;
+}
+
+.quickLinks li {
+    padding: 30px 10px;
+    background-color: #F4F4F4;
+}
+
+.quickLinks i {
+    display: block;
+    color: #E85B26;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* IG Styles */
+
+.socialMedia h2 {
+    margin-bottom: 50px;
+}
+
+.socialMedia li {
+    float: left;
+    width: calc(50% - 10px)
+}
+
+.socialMedia li:first-child {
+    margin-right: 20px;
+}
+
+/* FOOTER Styles */
+
+footer {
+    background-color: #F4F4F4;
+}
+
+footer .wrapper {
+    padding: 40px 20px;
+}
+
+footer li {
+    width: calc(100% / 4);
+    float: left;
+    text-align: center;
+}
+
+footer nav {
+    margin-bottom: 30px;
+}
+
+footer h3,
+.address p {
+    margin-bottom: 30px;
+}
+
+.newsletter p {
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+footer input[type=text] {
+    font-family: 'Catamaran', sans-serif;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: none;
+    border: none;
+}
+
+footer button {
+    padding: 10px;
+    border: 2px solid #E85B26;
+    text-transform: uppercase;
+    background-color: #186684;
+    color: #fff;
+    width: 100%;
+    font-family: 'Nova Flat', cursive;
+    margin-top: 15px;
+}
+
+/* COPYRIGHT Styles */
+
+.copyright {
+    padding: 10px;
+    color: #fff;
+    background-color: #1F2002;
+}
+
+/* MOBILE Styles */
+
 @media (max-width: 450px) {
-    nav {
+    header nav {
         visibility: visible;
     }
 
@@ -143,20 +297,17 @@ ul.menu li:hover {
         z-index: 3;
     }
 
-    header {
-        height: 100vh;
-    }
-
     header h1 {
         position: absolute;
         background-color: rgb(227, 228, 234, 0.89);
         padding: 10px;
         bottom: 100px;
-        right: 0;
-        width: 80%;
+        right: 20px;
+        width: calc(80% - 20px);
     }
 
     nav input:checked ~ ul.menu {
+        visibility: visible;
         transform: none;
     }
 
@@ -164,9 +315,13 @@ ul.menu li:hover {
         opacity: .5;
     }
 
-    .about figure {
+    .about figure,
+    .footcare figure {
         height: 250px;
         overflow: hidden;
     }
+
+    .about figure img,
+    .footcare figure img {margin-top: -50px;}
 
 }
