@@ -488,50 +488,51 @@ footer button {
 
 @media (max-width: 600px) {
     
-.address,
-.newsletter {
-    text-align: center;
-    float: none;
-    display: block;
-    width: 100%;
-}
+    .address,
+    .newsletter {
+        text-align: center;
+        float: none;
+        display: block;
+        width: 100%;
+    }
 
-.blog h2 {
-    margin-top: 50px;
-}
+    .blog h2 {
+        margin-top: 50px;
+    }
 
-.blog .wrapper .body {
-    text-align: center;
-}
+    .blog .wrapper .body {
+        text-align: center;
+    }
 
-.blog figure, 
-.blog .wrapper .body,
-.about .wrapper,
-.footcare .wrapper,
-.about figure,
-.footcare figure {
-    float: none;
-    display: block;
-    width: 100%;
-}
+    .blog figure, 
+    .blog .wrapper .body,
+    .about .wrapper,
+    .footcare .wrapper,
+    .about figure,
+    .footcare figure {
+        float: none;
+        display: block;
+        width: 100%;
+    }
 
-.about,
-.footcare {
-    text-align: center;
-}
+    .about,
+    .footcare {
+        text-align: center;
+    }
 
-.about .wrapper,
-.footcare .wrapper {
-    padding: 70px 30px;
-    height: auto;
-    overflow: auto;
-}
+    .about .wrapper,
+    .footcare .wrapper {
+        padding: 70px 30px;
+        height: auto;
+        overflow: auto;
+    }
 
 }
 
 /* MOBILE Styles */
 
 @media (max-width: 450px) {
+    
     header nav.desktop {
         visibility: hidden;
     }
