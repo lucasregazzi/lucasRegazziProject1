@@ -59,7 +59,7 @@ h1 {
 h1,
 h2,
 h3,
-button.feature,
+a.feature,
 .quickLinks,
 nav {
     font-family: 'Nova Flat', cursive;
@@ -78,7 +78,7 @@ img {
 
 h1, 
 h2, 
-button.feature, 
+a.feature, 
 header nav,
 .quickLinks {
     color: #186684;
@@ -89,7 +89,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-button.feature {
+a.feature {
+    display: inline-block;
     margin-top: 20px;
     padding: 10px;
     border: 2px solid #E85B26;
