@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,8 +13,17 @@
     <script src="https://kit.fontawesome.com/f5dc03632a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<a href="#about" class="skipContent" tabindex="1">Skip to main content</a>
     <header>
         <h1>Foot Forward</h1>
+        <nav class="desktop">
+            <ul id="menu" class="static">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
         <nav class="burger">
             <input type="checkbox"></input>
             <i class="fas fa-bars"></i>
@@ -26,12 +34,12 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <nav class="desktop">
-            <ul id="menu" class="static">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="socialMedia">
+            <ul>
+                <li><a href="/instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="/facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="/snapchat"><i class="fab fa-snapchat-ghost"></i></a></li>
+                <li><a href="/twitter"><i class="fab fa-twitter"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -45,7 +53,7 @@
                 </div>
             </section>
             <section class="footcare clearfix">
-                <figure><img src="./assets/image-2-copy@2x.png" alt="many of the same sneaker organized neatly" class="srOnly"></figure>
+                <figure><img src="./assets/image-2-copy@2x.png" alt="a hand tossing a high top sneaker up into the air" class="srOnly"></figure>
                     <div class="wrapper">
                         <h2>Footcare</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed magni omnis voluptate praesentium nam porro provident voluptas illum. Ratione quis sunt velit distinctio alias quos soluta et voluptatem fugiat!</p>
@@ -56,7 +64,7 @@
     <aside id="blog">
         <article class="blog">
             <div class="wrapper clearfix">
-                <figure><img src="assets/image-6@2x.png"></figure>
+                <figure><img src="assets/image-6@2x.png" alt="someone demonstrating the waterproof capacity of a pair of sneakers by graciously walking through a puddle"></figure>
                     <div class="body">
                         <h2>Giving back</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste soluta ab perferendis asperiores dolorum quasi, iusto ipsam repudiandae hic! Assumenda, nihil sequi aperiam vel corrupti voluptates vitae itaque hic excepturi! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis officiis aperiam ad! Omnis laudantium repellat quae sed vitae hic, similique porro, ipsum delectus ex provident? Perferendis inventore ipsam cumque.</p>
@@ -67,7 +75,7 @@
     </aside>
     <section class="quickLinks">
         <div class="wrapper">
-            <ul>
+            <ul class="clearfix">
                 <li>
                     <i class="fas fa-shopping-bag"></i>
                     <a href="/products" title="Click here for a list of our products!">Products</a>
@@ -83,18 +91,18 @@
             </ul>
         </div>
     </section>
-    <section class="socialMedia">
+    <section class="instagram">
         <div class="wrapper clearfix">
         <h2>The Gram</h2>
             <ul>
                 <li>
-                    <a href="instagram.com" title="First post"><img src="./assets/image-2@2x.png"></a>
+                    <a href="instagram.com" title="First post" alt="an atheletic sneaker being held up against a backdrop of a cloudy, blue sky"><img src="./assets/image-2@2x.png"></a>
                 </li>
                 <li>
-                    <a href="instagram.com" title="Second post"><img src="./assets/image-3@2x.png"></a>
+                    <a href="instagram.com" title="Second post" alt="an aerial view of a pair of sneakers worn by someone standing atop a tree stump"><img src="./assets/image-3@2x.png"></a>
                 </li>
-                <li class="x">
-                    <a href="instagram.com" title="Third post"><img src="./assets/image-4@2x.png"></a>
+                <li>
+                    <a href="instagram.com" title="Third post" alt="an atheletic sneaker being held up toe-first to the camera at a slght angle"><img src="./assets/image-4@2x.png"></a>
                 </li>
             </ul>
         </div>

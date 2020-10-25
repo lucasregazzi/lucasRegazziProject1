@@ -14,7 +14,21 @@ html {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: b
     margin: 0;
     padding: 0;
     transform: none;
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
+}
+
+button {
+    cursor: pointer;
+}
+
+.skipContent {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
 }
 
 figure,
@@ -109,30 +123,25 @@ header h1 {
     width: 300px;
 }
 
-header i, 
-header input {
+/* NAVIGATION Styles */
+
+.burger i, 
+.burger input {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
-/* NAVIGATION Styles */
-
-i.fas,
-ul.static li a {
-    transition-duration: 0.3s;
+.burger input {
+    width: 28px;
+    height: 32px;
+    opacity: 0;
+    transition: none;
+    cursor: pointer;
 }
 
 .burger {
     visibility: hidden;
-}
-
-nav input {
-    opacity: 0;
-    transition: none;
-    top: 29px;
-    right: 27px;
-    cursor: pointer;
 }
 
 ul {
@@ -140,8 +149,9 @@ ul {
     line-height: 29px;
 }
 
-ul.dropdown {
+.dropdown {
     position: absolute;
+    top: 0;
     z-index: 1;
     width: 100vw;
     list-style-type: none;
@@ -150,36 +160,55 @@ ul.dropdown {
     transform: translate(-100%, 0);
 }
 
-ul.dropdown li {
+.dropdown li {
     text-align: center;
     margin: 20px;
     transition-duration: 0.2s;
     float: left;
 }
 
-ul.dropdown li:hover {
+.dropdown li:hover, 
+.dropdown li:focus {
     color: #E85B26;
 }
 
-ul.static {
+.static {
     padding: 20px;
 }
 
-ul.static li {
+.static li {
     display: inline-block;
     margin-right: 40px;
 }
 
-ul.static li:last-child {
+.static li:last-child {
     margin-right: 0px;
 }
 
-ul.static li:hover a {
+.static li:hover a, 
+.static li:focus a {
     color: #E85B26;
 }
 
 .static li:last-child {
     margin-right: 0px;
+}
+
+.socialMedia {
+    position: absolute;
+    height: 116px;
+    top: calc(50vh - 116px);
+    right: 20px;
+    color: #E85B26;
+}
+
+.socialMedia li {
+    height: calc(100% / 4);
+}
+
+.socialMedia li:hover,
+.socialMedia li:focus {
+    color: #186684;
 }
 
 /* WRAPPER Styles */
@@ -280,6 +309,7 @@ ul.static li:hover a {
     background-attachment: fixed;
     background-position: center left;
     font-size: 1.4rem;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .quickLinks .wrapper {
@@ -289,6 +319,8 @@ ul.static li:hover a {
 .quickLinks li {
     padding: 30px 10px;
     background-color: #F4F4F4;
+    float: left;
+    width: calc(100% / 3);
 }
 
 .quickLinks i {
@@ -300,11 +332,11 @@ ul.static li:hover a {
 
 /* IG Styles */
 
-.socialMedia h2 {
+.instagram h2 {
     margin-bottom: 50px;
 }
 
-.socialMedia li {
+.instagram li {
     float: left;
     width: calc(100% / 3);
     padding: 10px;
@@ -391,11 +423,13 @@ footer button {
 
 @media (max-width: 1200px) {
 
-    .x {
-        display: none;
+    .instagram li:last-child {
+        height: 0;
+        width: 0;
+        overflow: hidden;
     }
 
-    .socialMedia li {
+    .instagram li {
         width: calc(100% / 2);
     }
 
@@ -441,6 +475,14 @@ footer button {
         height: 250px;
         overflow: hidden;
     }
+
+    .quickLinks li {
+        display: block;
+        float: none;
+        width: 100%;
+        font-family: 'Nova Flat', cursive;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -516,6 +558,10 @@ footer button {
 
     nav input:checked ~ i.fas {
         opacity: .5;
+    }
+
+    .socialMedia {
+        display: none;
     }
 
 }
