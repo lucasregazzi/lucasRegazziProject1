@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foot Forward</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="./style.css">
     <!-- External fonts -->
@@ -19,33 +19,33 @@
         <nav class="burger">
             <input type="checkbox"></input>
             <i class="fas fa-bars"></i>
-            <ul id="menu" class="menu">
-                <a href="#home">
-                    <li>Home</li>
-                </a>
-                <a href="#about">
-                    <li>About</li>
-                </a>
-                <a href="#blog">
-                    <li>Blog</li>
-                </a>
-                <a href="#contact">
-                    <li>Contact</li>
-                </a>
+            <ul id="menu" class="dropdown">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="desktop">
+            <ul id="menu" class="static">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main id="about">
-            <section class="about">
-                <figure><img src="./assets/image-2_2@2x.png" alt="many of the same sneaker organized neatly"></figure>
+            <section class="about clearfix">
+                <figure><img src="./assets/image-2_2@2x.png" alt="many of the same sneaker organized neatly" class="srOnly"></figure>
                 <div class="wrapper">
                     <h2>We specialize in:</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed magni omnis voluptate praesentium nam porro provident voluptas illum. Ratione quis sunt velit distinctio alias quos soluta et voluptatem fugiat!</p>
                     <button class="feature">Read More</button>
                 </div>
             </section>
-            <section class="footcare">
-                <figure><img src="./assets/image-2-copy@2x.png" alt="many of the same sneaker organized neatly"></figure>
+            <section class="footcare clearfix">
+                <figure><img src="./assets/image-2-copy@2x.png" alt="many of the same sneaker organized neatly" class="srOnly"></figure>
                     <div class="wrapper">
                         <h2>Footcare</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed magni omnis voluptate praesentium nam porro provident voluptas illum. Ratione quis sunt velit distinctio alias quos soluta et voluptatem fugiat!</p>
@@ -55,12 +55,14 @@
     </main>
     <aside id="blog">
         <article class="blog">
-            <div class="wrapper">
-            <figure><img src="assets/image-6@2x.png"></figure>
-            <h2>Giving back</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste soluta ab perferendis asperiores dolorum quasi, iusto ipsam repudiandae hic! Assumenda, nihil sequi aperiam vel corrupti voluptates vitae itaque hic excepturi! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis officiis aperiam ad! Omnis laudantium repellat quae sed vitae hic, similique porro, ipsum delectus ex provident? Perferendis inventore ipsam cumque.</p>
-            <button class="feature">Read More</button>
-            </div>
+            <div class="wrapper clearfix">
+                <figure><img src="assets/image-6@2x.png"></figure>
+                    <div class="body">
+                        <h2>Giving back</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste soluta ab perferendis asperiores dolorum quasi, iusto ipsam repudiandae hic! Assumenda, nihil sequi aperiam vel corrupti voluptates vitae itaque hic excepturi! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis officiis aperiam ad! Omnis laudantium repellat quae sed vitae hic, similique porro, ipsum delectus ex provident? Perferendis inventore ipsam cumque.</p>
+                        <button class="feature">Read More</button>
+                    </div>
+                </div>
         </article>
     </aside>
     <section class="quickLinks">
@@ -91,33 +93,38 @@
                 <li>
                     <a href="instagram.com" title="Second post"><img src="./assets/image-3@2x.png"></a>
                 </li>
+                <li class="x">
+                    <a href="instagram.com" title="Third post"><img src="./assets/image-4@2x.png"></a>
+                </li>
             </ul>
         </div>
     </section>
     <footer>
         <div class="wrapper">
             <nav>
-                <ul class="clearfix">
+                <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <section class="address" id="contact">
-                <h3>Contact</h3>
-                <p>info@email.com | 123 - 456 - 7890<br>123 some road, Toronto, ON<br>A5A 5A5, Canada</p>
-            </section>
-            <section class="newsletter">
-                <h3>Stay updated</h3>
-                <p>Subscribe to our newsletter to stay updated.</p>
-                <form action="https://formspree.io/f/xknprzrp" method="POST">
-                    <label>
-                        <input type="text" name="_replyto" placeholder="email address">
-                    </label>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </section>
+            <div id="contact" class="contact clearfix">
+                <section class="address">
+                    <h3>Contact</h3>
+                    <p>info@email.com | 123 - 456 - 7890<br>123 some road, Toronto, ON<br>A5A 5A5, Canada</p>
+                </section>
+                <section class="newsletter">
+                    <h3>Stay updated</h3>
+                    <p>Subscribe to our newsletter to stay updated.</p>
+                    <form action="https://formspree.io/f/xknprzrp" method="POST">
+                        <label>
+                            <input type="text" name="_replyto" placeholder="email address">
+                        </label>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </section>
+            </div>
         </div>
     </footer>
     <section class="copyright">
